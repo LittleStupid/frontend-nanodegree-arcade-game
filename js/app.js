@@ -1,3 +1,9 @@
+var CANVAS_WIDTH = 505;
+var LEFT_BOUND = 0;
+var RIGHT_BOUND = 400;
+var BOTTOM_BOUND = 400;
+var UP_BOUND = 0;
+
 // Enemies our player must avoid
 var Enemy = function( x = 0, y = 0, speed = 25 ) {
     // Variables applied to each of our instances go here,
@@ -17,14 +23,11 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    CANVAS_WIDTH = 505;
-
     this.x += this.speed * dt;
 
     if( this.x >= CANVAS_WIDTH ) {
       this.x = 0;
     }
-
 };
 
 // Draw the enemy on the screen, required method for game
@@ -45,7 +48,7 @@ var Player = function() {
 Player.prototype.reset = function() {
   this.x = 200;
   this.y = 400;
-}
+};
 
 Player.prototype.update = function(dt) {
 };
@@ -57,10 +60,6 @@ Player.prototype.render = function() {
 Player.prototype.handleInput = function( key ) {
   console.log( key );
 
-  LEFT_BOUND = 0;
-  RIGHT_BOUND = 400;
-  BOTTOM_BOUND = 400;
-  UP_BOUND = 0;
 
   if( key == 'left' ) {
     if( this.x > LEFT_BOUND ) {
@@ -87,7 +86,7 @@ Player.prototype.handleInput = function( key ) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-allEnemies = new Array();
+var allEnemies = []];
 allEnemies.push( new Enemy( 0, 60, 31 ) );
 allEnemies.push( new Enemy( 0, 60, 73 ) );
 
