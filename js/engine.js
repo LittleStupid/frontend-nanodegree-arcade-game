@@ -80,9 +80,28 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
     }
 
+    function checkCollisions() {
+      //win
+      if( player.y < 0 ) {
+        player.reset();
+      }
+
+      //collise as circle
+      for( var i = 0; i < allEnemies.length; i++ ) {
+        x_diff = player.x - allEnemies[i].x;
+        y_diff = player.y - allEnemies[i].y;
+
+        dist_sq = x_diff * x_diff + y_diff * y_diff;
+        RADIUS_SQ = 6400;
+
+        if(  dist_sq <= RADIUS_SQ ) {
+          player.reset();
+        }
+      }
+    }
     /* This is called by the update function and loops through all of the
      * objects within your allEnemies array as defined in app.js and calls
      * their update() methods. It will then call the update function for your
