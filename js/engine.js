@@ -83,6 +83,7 @@ var Engine = (function(global) {
         checkCollisions();
     }
 
+    var RADIUS_SQ = 6400;
     function checkCollisions() {
       //win
       if( player.y < 0 ) {
@@ -91,11 +92,10 @@ var Engine = (function(global) {
 
       //collise as circle
       for( var i = 0; i < allEnemies.length; i++ ) {
-        x_diff = player.x - allEnemies[i].x;
-        y_diff = player.y - allEnemies[i].y;
+        var x_diff = player.x - allEnemies[i].x;
+        var y_diff = player.y - allEnemies[i].y;
 
-        dist_sq = x_diff * x_diff + y_diff * y_diff;
-        RADIUS_SQ = 6400;
+        var dist_sq = x_diff * x_diff + y_diff * y_diff;
 
         if(  dist_sq <= RADIUS_SQ ) {
           player.reset();

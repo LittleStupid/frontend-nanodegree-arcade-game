@@ -58,9 +58,6 @@ Player.prototype.render = function() {
 };
 
 Player.prototype.handleInput = function( key ) {
-  console.log( key );
-
-
   if( key == 'left' ) {
     if( this.x > LEFT_BOUND ) {
         this.x -= 100;
