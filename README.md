@@ -1,6 +1,8 @@
-frontend-nanodegree-arcade-game
-===============================
+This is a Demo Game within javascript and html.
+How to open:
+    open index.html in a browser.
 
-Students should use this [rubric](https://www.udacity.com/course/viewer/#!/c-nd001/l-2696458597/m-2687128535) for self-checking their submission.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+How to play:
+    character can be controlled by the key of keyboard.
+    Arrow up, down, left and right are available.
+    Reach to the river to win, hit by the bugs will result in lose.
