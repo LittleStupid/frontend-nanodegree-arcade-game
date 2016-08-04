@@ -5,3 +5,5 @@
     character can be controlled by the key of keyboard.
     Arrow up, down, left and right are available.
     Reach to the river to win, hit by the bugs will result in lose.
+
+![image](https://github.com/LittleStupid/frontend-nanodegree-arcade-game/blob/master/arcade_game_demo.gif)
